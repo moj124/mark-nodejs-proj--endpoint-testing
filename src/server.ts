@@ -69,4 +69,52 @@ app.get("/quest/decline", (req, res) => {
   });
 });
 
+app.get('/quest/start/impossible', (req,res) =>{
+  res.json({
+    location: CAVE_EXTERIOR,
+    speech: { 
+      speaker: {
+        name: 'The unmovable Lava Flow',
+        description: 'A boudler dragon is disguised under the blooming flow of lava'
+      },
+      text:'A mighty fireball emerges and the dragon leeps and releases an excruciating scream.',
+    },
+    options: {
+      restart: '/',
+    },
+  });
+});
+
+app.get('/quest/start/easy', (req,res) =>{
+  res.json({
+    location: CAVE_EXTERIOR,
+    speech: { 
+      speaker: {
+        name: 'The unmovable Lava Flow',
+        description: 'A boudler dragon is disguised under the blooming flow of lava'
+      },
+      text:'A mighty fireball emerges and the dragon leeps and releases an excruciating scream.',
+    },
+    options: {
+      restart: '/',
+    },
+  });
+});
+
+app.get('/quest/start/hard', (req,res) =>{
+  res.json({
+    location: CAVE_EXTERIOR,
+    speech: { 
+      speaker: {
+        name: 'The unmovable Lava Flow',
+        description: 'A boudler dragon is disguised under the blooming flow of lava'
+      },
+      text:'A mighty fireball emerges and the dragon leeps and releases an excruciating scream.',
+    },
+    options: {
+      restart: '/',
+    },
+  });
+});
+
 export default app;
